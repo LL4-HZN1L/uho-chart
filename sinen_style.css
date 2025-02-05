@@ -1,0 +1,152 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+h2{
+	margin-bottom:50px;
+}
+
+/* 入力と計算機を横並び */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+/* 入力欄 */
+.inputs {
+    text-align: left;
+}
+
+.inputs span {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+
+}
+
+.inputs label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.inputs input {
+    width: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 計算機のスタイル */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px; /* 計算機とグラフの間の余白 */
+    margin-top: 20px;
+    flex-grow: 1; /* コンテンツ部分を伸ばす */
+}
+
+.calculator {
+    width: 200px;
+    border-radius: 8px;
+    margin-top:-20px
+}
+
+.calculator h3 {
+    margin: 0px;
+    font-size: 20px;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+.calculator label {
+    font-weight: 500;
+    display: block;
+    margin-top: 10px;
+}
+
+.calculator select, .calculator input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.calculator button {
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.calculator button:hover {
+    background-color: #0056b3;
+}
+.keisan_chuui{
+	font-size: 12px;
+    color: red;
+    text-align: center;
+}
+
+
+/* グラフ中央配置 */
+.graph-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* スコア表示 */
+.results {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#scoreValue {
+    font-weight: 600;
+    font-size: 35px;
+    color: red;
+}
+
+#grade {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* フッター */
+.footer {
+    font-size: 12px;
+    color: #aaaaaa;
+    text-align: center;
+    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 10px;
+}
+
+
+p {
+    margin: 5px;
+}

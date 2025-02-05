@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深淵ゴリラあぶり出しレーダーチャート</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="sinen_style.css">
+</head>
+<body>
+
+<h2>深淵ゴリラあぶり出しレーダーチャート</h2>
+
+<div class="container">
+    <div class="inputs">
+        <span>数値入力欄</span>
+        <label>審神者Lv <input type="number" id="scoreA" min="0" max="10" value="5"></label>
+        <label>上位6振合算 <input type="number" id="scoreB" min="0" max="10" value="5"></label>
+        <label>金宝物断片 <input type="number" id="scoreC" min="0" max="10" value="5"></label>
+        <label>極カンスト <input type="number" id="scoreD" min="0" max="10" value="5"></label>
+        <label>出陣数 <input type="number" id="scoreE" min="0" max="10" value="5"></label>
+    </div>
+
+    <div class="main-container">
+    <div class="calculator">
+        <h3>簡易計算機</h3>
+        <label for="calculationType">計算する項目を選択:</label>
+        <select id="calculationType">
+            <option value="A">審神者Lv</option>
+            <option value="B">上位6振合算</option>
+            <option value="C">金宝物断片</option>
+            <option value="D">極カンスト</option>
+            <option value="E">出陣数</option>
+        </select>
+
+        <p id="description">50Lvごとに1点</p>
+
+        <label for="inputValue">数値入力:</label>
+        <input type="number" id="inputValue" min="0" value="0">
+
+        <button onclick="calculate()">計算</button>
+
+        <p>計算結果: <span id="result">0</span></p>
+        <p><span class="keisan_chuui">11点以上が出た場合は10点になるよう切り捨て</span></p>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="radarChart" width="400" height="400"></canvas>
+        <div class="results">
+            <p id="totalScore">合計： <span id="scoreValue">25</span> 点</p>
+            <p id="grade">成績：中堅ゴリラ</p>
+        </div>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+<footer>
+    <div class="footer">
+        <p>＠備中在住komeゴリラ</p>
+        <p>どの方面とも関係のないお遊びツールです</p>
+    </div>
+</footer>
+</html>
