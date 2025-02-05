@@ -42,7 +42,9 @@ function getGrade(total) {
     if (total <= 5) return "人間";
     if (total <= 20) return "一般ゴリラ";
     if (total <= 30) return "中堅ゴリラ";
+    if (total <= 40) return "浅瀬ゴリラ";
     if (total <= 49) return "深淵ゴリラ";
+
     return "奈落ゴリラ";
 }
 
