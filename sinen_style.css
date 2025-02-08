@@ -3,24 +3,73 @@ body {
     flex-direction: column;
     align-items: center;
     font-family: Arial, sans-serif;
+    min-width: 900px;
+    min-height:750px;
+}
+
+@media (max-width: 450px) {
+body {
+    min-width: 350px;
+    min-height:700px;
+}
 }
 
 h2{
 	margin-bottom:50px;
+    text-align: center;
+    }
+
+p {
+    margin: 5px;
 }
 
-/* 入力と計算機を横並び */
+/*  450px以上のデフォルトレイアウト（全て横並び） */
 .container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 50px;
-    margin-bottom: 20px;
+    flex-wrap: nowrap;
 }
+
+/*  数値入力と計算機を横並びにする */
+.inputs-calculator-wrapper {
+    display: flex;
+    flex-direction: row; /* （デフォルトで横並び） */
+    gap: 20px;
+}
+
+/*  450px以下のレイアウト変更 */
+@media (max-width: 450px) {
+    .container {
+        flex-direction: column; /* 縦並び */
+        align-items: center;
+        gap: 20px;
+    }
+
+    /*  数値入力欄と計算機を横並び */
+    .inputs-calculator-wrapper {
+        flex-direction: row; /* 横並び */
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        width: 100%;
+    }
+
+    /*  グラフをその下に配置 */
+    .chart-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 /* 入力欄 */
 .inputs {
     text-align: left;
+    max-width: 110px;
 }
 
 .inputs span {
@@ -29,7 +78,6 @@ h2{
     margin-bottom: 20px;
     border-bottom: 2px solid #000;
     font-weight: bold;
-
 }
 
 .inputs label {
@@ -57,7 +105,6 @@ h2{
 .calculator {
     width: 200px;
     border-radius: 8px;
-    margin-top:-20px
 }
 
 .calculator h3 {
@@ -96,7 +143,22 @@ h2{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 400px;
+    height:400px;
 }
+
+@media (max-width: 450px) {
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    height:300px;
+
+}
+}
+
 .calculator button:hover {
     background-color: #0056b3;
 }
@@ -138,15 +200,26 @@ h2{
     color: #aaaaaa;
     text-align: center;
     margin-top: 50px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate3d(-50%,150px,0);
     width: 100%;
     padding: 10px;
 }
 
-
-p {
-    margin: 5px;
+@media (max-width: 450px) {
+.footer {
+    font-size: 12px;
+    color: #aaaaaa;
+    text-align: center;
+    margin-top: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-50%,450px,0);
+    width: 100%;
+    padding: 10px;
 }
+}
+
