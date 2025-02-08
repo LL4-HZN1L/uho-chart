@@ -80,7 +80,7 @@ document.getElementById("calculationType").addEventListener("change", function()
     let selectedOption = this.value; // 選択された項目を取得
 
     let descriptionTexts = {
-        "A": "50Lvごとに1点",
+        "A": "35Lvごとに1点",
         "B": "5.5億ごとに1点(極大太刀×6振り分のカンスト値÷10)",
         "C": "45断片ごとに1点(宝物作成済の場合は×9で断片数を計算)",
         "D": "6振ごとに1点",
