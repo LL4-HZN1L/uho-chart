@@ -39,13 +39,17 @@ const radarChart = new Chart(ctx, {
 
 // 成績の判定関数
 function getGrade(total) {
-    if (total <= 5) return "人間";
-    if (total <= 20) return "一般ゴリラ";
-    if (total <= 30) return "中堅ゴリラ";
-    if (total <= 40) return "浅瀬ゴリラ";
-    if (total <= 49) return "深淵ゴリラ";
-
-    return "奈落ゴリラ";
+    if (total <= 3) return "ニンゲン";
+    if (total <= 10) return "一般ゴリラ	";
+    if (total <= 15) return "深淵の駐車場（テトラポッド）";
+    if (total <= 20) return "深淵の砂浜";
+    if (total <= 25) return "深淵の波打ち際";
+    if (total <= 30) return "深淵の浅瀬";
+    if (total <= 35) return "深淵の沖";
+    if (total <= 40) return "深淵の外洋";
+    if (total <= 45) return "深淵のシーラカンス";
+    if (total <= 49) return "深淵のリュウグウノツカイ";
+    return "深淵のぬしダイオウグソクゴリラ";
 }
 
 // 入力値が変更されたらグラフとスコアを更新
@@ -68,7 +72,7 @@ function updateChart() {
 
     // 成績のテキスト更新
     let gradeElement = document.getElementById("grade");
-    gradeElement.innerText = `あなたは… ${getGrade(totalScore)}`;
+    gradeElement.innerHTML  = `あなたは…<br> ${getGrade(totalScore)}`;
 }
 
 // 入力変更イベントを登録
